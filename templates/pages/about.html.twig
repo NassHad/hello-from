@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title 'About Us | ' ~ parent() %}
+
+{% block body %}
+	<img src="{{ asset('/images/dev.svg') }}" alt="Dev" class="w-80 my-12 rounded-full shadow-md">
+	<h1 class="text-gray-700">Crée avec
+		<span class="text-pink-500">&hearts;</span>
+		par NassHad</h1>
+	<p class="mt-5">
+		<a href="{{ path('app_home') }}" class="text-indigo-500 hover:text-indigo-600 underline">Back to the homepage</a>
+	</p>
+{% endblock %}

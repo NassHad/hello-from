@@ -1,15 +1,11 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
-	<h1>Hello from Québec!</h1>
-	<p>It's currently
-		{{ 'now'|date('H:i:A') }}.</p> {# Le fuseau horaire est défini dans php.ini à la racine du projet #}
+{% block title 'Hello From !' %}
 
-	<footer>
-		<p>&copy; Copyright
-			{{ 'now'|date('Y') }}
-			&middot;
-			<a href="#">About Us</a>
-		</p>
-	</footer>
+{% block body %}
+	<img src="{{ asset('/images/lille.jpg') }}" alt="logo Lille" class="h-32 mt-12 rounded shadow-md">
+	<h1 class="mt-5 text-3xl sm:text-5xl font-semibold text-indigo-600">Hello from Québec!</h1>
+	<p class="mt-2 text-lg text-gray-800">It's currently
+		{{ 'now'|date('H:i:A') }}.</p>
+	{# Le fuseau horaire est défini dans php.ini à la racine du projet #}
 {% endblock %}
